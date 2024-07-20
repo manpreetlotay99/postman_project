@@ -8,6 +8,8 @@ import ResponseViewer from './ResponseViewer';
 import Overview from './Overview';
 import styles from './playground.module.css';
 
+import { PanelGroup, Panel, PanelResizeHandle } from 'react-resizable-panels';
+
 const Playground = () => {
   const { state } = useContext(Context);
 
@@ -54,8 +56,15 @@ const Playground = () => {
                   : styles.panel_horizontal
               }
             >
-              <PayloadForm />
-              <ResponseViewer />
+              <PanelGroup direction="vertical">
+                <Panel defaultSize={10} minSize={27.6}>
+                  <PayloadForm />
+                </Panel>
+                <PanelResizeHandle className={styles.customResizeHandle}/>
+                <Panel defaultSize={50} minSize={20}>
+                  <ResponseViewer />
+                </Panel>
+              </PanelGroup>
             </div>
           </div>
           <div

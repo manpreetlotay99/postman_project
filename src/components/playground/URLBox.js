@@ -48,7 +48,7 @@ const AutoGrowInput = forwardRef((props, ref) => {
         display: 'inline-grid',
         alignItems: 'center',
         justifyItems: 'start',
-        maxWidth: '500px',
+        maxWidth: '1300px',
       }}
     >
       <input
@@ -61,7 +61,7 @@ const AutoGrowInput = forwardRef((props, ref) => {
           width: '100%',
           padding: 0,
           border: 'none',
-          maxWidth: '600px',
+          maxWidth: '1300px',
         }}
       />
       <span
