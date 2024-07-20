@@ -235,9 +235,13 @@ const ResponseWrapper = () => {
           </div>
         </div>
       ) : (
-        <div>
+        <div >
+          {/* <img src='/home/shtlp_0179/Desktop/Postman Clone/postman_project/src/images/no-monitors.png' width={100} height={100}/>
+           */}
           {state.apiError && (
-            <div className={style.apiError}>{state.apiError}</div>
+            <div className={style.response_ph}>
+                  <div className={style.apiError}>{state.apiError}</div>
+            </div>
           )}
         </div>
       )}

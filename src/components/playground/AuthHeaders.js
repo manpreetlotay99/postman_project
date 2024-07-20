@@ -6,8 +6,9 @@ const AuthHeaders = () => {
   const { state, dispatch } = useContext(Context);
 
   const [bearer, setBearer] = useState(() => {
-    if (state.auth === 'bearer') {
-      return state.authHeader.split(':')[1].split(' ')[1] || '';
+    if (state.auth === 'bearer' && state.authHeader) {
+      const parts = state.authHeader.split(':');
+      return parts.length > 1 && parts[1].split(' ').length > 1 ? parts[1].split(' ')[1] : '';
     }
     return '';
   });

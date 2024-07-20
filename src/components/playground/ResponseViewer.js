@@ -29,7 +29,7 @@ const ResponseViewer = () => {
             <span>Response</span>
             {state.splitView === 'H' && (
               <span
-                onClick={toggleView}
+                // onClick={toggleView}
                 className={
                   state.responsePanelMinimized
                     ? styles.toggle_arrow
